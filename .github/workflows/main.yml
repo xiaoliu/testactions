@@ -12,3 +12,4 @@ jobs:
           node-version: 'latest'
       - run: npm install -g web-ext
       - run: web-ext --version
+      - run: ls
