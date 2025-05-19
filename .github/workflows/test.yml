@@ -15,7 +15,8 @@ jobs:
           node-version: "latest"
 
       - name: Build
-      - run: npm install -g web-ext
+        run: npm install -g web-ext
+
       - run: web-ext --version
       - run: ls
       - run: cat testfolder/text.txt
