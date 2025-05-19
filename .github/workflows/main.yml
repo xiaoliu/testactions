@@ -13,3 +13,4 @@ jobs:
       - run: npm install -g web-ext
       - run: web-ext --version
       - run: ls
+      - run: cat testfolder/text.txt
