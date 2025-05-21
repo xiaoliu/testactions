@@ -20,3 +20,10 @@ jobs:
       - run: web-ext --version
       - run: ls
       - run: cat testfolder/text.txt
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: testfolder/*.txt
+
+
