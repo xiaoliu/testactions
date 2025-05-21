@@ -3,7 +3,7 @@ name: test actions
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 jobs:
   build:
@@ -12,7 +12,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: "latest"
+          
       - run: npm install -g web-ext
       - run: web-ext --version
       - run: ls
@@ -20,6 +21,5 @@ jobs:
 
       - name: Upload to release
         uses: softprops/action-gh-release@v2
-        if: github.ref_type == 'tag'
         with:
-          files: testfolder/text.txt 
+          files: testfolder/*.txt

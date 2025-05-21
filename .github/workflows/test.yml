@@ -20,9 +20,3 @@ jobs:
       - run: web-ext --version
       - run: ls
       - run: cat testfolder/text.txt
-
-      - name: Upload to release
-        uses: softprops/action-gh-release@v2
-        if: github.ref_type == 'tag'
-        with:
-          files: testfolder/*.txt
